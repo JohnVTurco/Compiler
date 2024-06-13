@@ -398,9 +398,9 @@ void generateHelper(Node *root, Procedure proc)
       Jalr(5);
       pop(31);
 
-      Bne(3, 0, "SKIPULOUSCHEW" + to_string(labelCounter));
+      Bne(3, 0, "SKIPPING" + to_string(labelCounter));
       Add(3, 3, 11);
-      Label("SKIPULOUSCHEW" + to_string(labelCounter));
+      Label("SKIPPING" + to_string(labelCounter));
       labelCounter++;
     }
     else if (root->rule.RHS.size() == 4)
